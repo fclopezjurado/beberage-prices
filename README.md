@@ -1,4 +1,4 @@
-# beberage-prices
+# beverage-prices
 Repository to solve this kata https://github.com/Codesai/practice_program/tree/master/katas_java/05-refactoring-awful-inheritance-use-with-beverage-prices-kata
 This code computes the prices of the beverages served in our coffe house.
 

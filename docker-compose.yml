@@ -1,0 +1,16 @@
+version: "3.7"
+
+services:
+  beverage-prices-php:
+    container_name: beverage-prices-php-fpm
+    image: beverage-prices-php
+    env_file:
+      - .env
+    build:
+      dockerfile: ./docker/php/Dockerfile
+      context: .
+    volumes:
+      - .:/var/www/beverage-prices
+      - ./docker/php/php.ini:/usr/local/etc/php/php.ini
+      - ./docker/php/conf.d/xdebug.ini:/usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
+      - ./docker/php/conf.d/error_reporting.ini:/usr/local/etc/php/conf.d/error_reporting.ini
