@@ -4,10 +4,12 @@ declare(strict_types=1);
 
 namespace App\Domain;
 
-final class CoffeeWithMilk extends Coffee
+final class Cinnamon implements Supplement
 {
+    public const UNIT_PRICE = 0.05;
+
     public function price(): float
     {
-        return parent::price() + 0.1;
+        return 0.05;
     }
 }
