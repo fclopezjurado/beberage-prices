@@ -4,10 +4,16 @@ declare(strict_types=1);
 
 namespace App\Domain;
 
-class HotChocolate implements Beverage
+final readonly class HotChocolate implements Beverage
 {
-    public function price(): float
+    public const UNIT_PRICE = 1.45;
+
+    public function __construct(private Supplements $supplements)
     {
-        return 1.45;
+    }
+
+    public function calculatePrice(): float
+    {
+        return self::UNIT_PRICE + $this->supplements->calculatePrice();
     }
 }

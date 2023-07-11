@@ -8,7 +8,7 @@ final class Cream implements Supplement
 {
     public const UNIT_PRICE = 0.15;
 
-    public function price(): float
+    public function calculatePrice(): float
     {
         return self::UNIT_PRICE;
     }

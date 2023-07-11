@@ -6,5 +6,5 @@ namespace App\Domain;
 
 interface Supplement
 {
-    public function price(): float;
+    public function calculatePrice(): float;
 }

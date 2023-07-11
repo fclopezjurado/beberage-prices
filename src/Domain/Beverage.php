@@ -6,5 +6,5 @@ namespace App\Domain;
 
 interface Beverage
 {
-    public function price(): float;
+    public function calculatePrice(): float;
 }

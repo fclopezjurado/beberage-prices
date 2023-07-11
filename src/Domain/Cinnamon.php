@@ -8,8 +8,8 @@ final class Cinnamon implements Supplement
 {
     public const UNIT_PRICE = 0.05;
 
-    public function price(): float
+    public function calculatePrice(): float
     {
-        return 0.05;
+        return self::UNIT_PRICE;
     }
 }

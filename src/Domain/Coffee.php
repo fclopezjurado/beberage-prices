@@ -4,23 +4,16 @@ declare(strict_types=1);
 
 namespace App\Domain;
 
-class Coffee implements Beverage
+final readonly class Coffee implements Beverage
 {
-    /**
-     * @param Supplement[] $supplements
-     */
-    public function __construct(private readonly array $supplements)
+    public const UNIT_PRICE = 1.2;
+
+    public function __construct(private Supplements $supplements)
     {
     }
 
-    private function calculateSupplementPrice(): float
+    public function calculatePrice(): float
     {
-        $price = 0;
-
-        foreach ()
-    }
-    public function price(): float
-    {
-        return 1.2;
+        return self::UNIT_PRICE + $this->supplements->calculatePrice();
     }
 }
